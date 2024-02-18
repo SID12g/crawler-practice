@@ -9,6 +9,17 @@ def price(code):
 print('samsung: ',price('005930'))
 print('lg: ',price('003555'))
 
+list = ['005930', '066575', '005380', '035720', '034220', '003490']
+
+File = open('a.csv', 'w')
+File.write(price(list[0])+'\n')
+File.write(price(list[1])+'\n')
+File.write(price(list[2])+'\n')
+File.write(price(list[3])+'\n')
+File.write(price(list[4])+'\n')
+File.write(price(list[5]))
+File.close()
+
 # data = requests.get('https://finance.naver.com/item/main.naver?code=005930')
 # soup = BeautifulSoup(data.content, 'html.parser')
 
@@ -22,3 +33,4 @@ print('lg: ',price('003555'))
 # soup = BeautifulSoup(link.content, 'html.parser')
 # dd = soup.find_all('em', class_="no_up")[0].text
 # print(dd)
+
